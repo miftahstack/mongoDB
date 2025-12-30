@@ -6,6 +6,11 @@ const port = 3000;
 app.use(express.json())
 
 
+import mongoose from "mongoose";
+
+await mongoose.connect(process.env.MONGO_URI);
+
+
 const cors = require("cors");
 app.use(cors());
 
